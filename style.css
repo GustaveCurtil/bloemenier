@@ -40,6 +40,10 @@ header {
     align-items: center;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
 nav {
     font-family: "Mynerve", cursive;
     font-size: 0.8rem;
@@ -105,9 +109,16 @@ nav a {
     border: 1px solid #354604;
     text-decoration: none;
     padding: 0.4rem 0.8rem 0.6rem 0.8rem;
+    font-weight: 600;
 }
 
-nav a:hover {
+nav a:hover{
+    background-color: #354604;
+        color: #f3e8ca;
+}
+
+nav a.actief {
+    pointer-events: none;
     background-color: #354604;
         color: #f3e8ca;
 }
