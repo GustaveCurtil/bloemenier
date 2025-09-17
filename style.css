@@ -23,6 +23,8 @@ h1, h2, h3 {
     --height-footer: 2.8rem;
 
     --gap-big: 2.4rem;
+    --gap-small: 0.6rem;
+    --gap-mini: 0.2rem;
 
     --color-bg:#f3e8ca;
     --color-text: #354604;
@@ -41,11 +43,11 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 
-    padding: 0.4rem;
+    padding: 0 0.4rem;
 
-    height: 100svh;
+    min-height: 100svh;
 
-    background-color: #f3e8ca;
+    background-color: var(--color-bg);
     color: #354604;
 }
 
@@ -72,7 +74,7 @@ nav {
 
 main {
     width: 100%;
-    min-height: calc(100% - var(--height-header) - var(--height-footer));
+    min-height: calc(100svh - var(--height-header) - var(--height-footer));
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -96,6 +98,8 @@ main div p {
 }
 
 footer {
+    height: var(--height-footer);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +112,7 @@ a {
         color: #354604;
 }
 
-img {
+img#logo {
     width: 69%;
     max-width: 340px;
     animation: rotate 4s ease-in-out infinite alternate;
@@ -201,8 +205,8 @@ section#aanbod>div:nth-child(2) {border-radius: 35% 50% 40% 25% / 60% 50% 45% 50
 section#aanbod>div:nth-child(3) {border-radius: 20% 65% 25% 35% / 65% 80% 35% 55%; background-color: var(--color-purple);}
 
 section#aanbod>div:hover {
-    background-color: #354604;
-    color: #f3e8ca;
+    background-color: var(--color-red);
+    color: var(--color-bg);
 }
 
 @media screen and (min-width: 800px) {
@@ -217,4 +221,15 @@ section#aanbod>div:hover {
     section#aanbod>div {
         width: 400px;
     }
+}
+
+section.gallerij {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-small);
+}
+
+section.gallerij img {
+    width: calc( (100% - var(--gap-small)) / 2 );
 }
