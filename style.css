@@ -17,10 +17,12 @@ html {
 
 :root {
     --height-header: 8rem;
-    --height-footer: 2.4rem;
+    --height-footer: 2.8rem;
 
     --gap-big: 2.4rem;
 }
+
+.desktop {display: none;}
 
 body {
     width: 100vw;
@@ -152,4 +154,8 @@ nav a:nth-child(3) {animation: wobble 18s ease-in-out alternate-reverse infinite
   100% {
     border-radius: 45% 19% 50% 70% / 69% 50% 70% 60%;
   }
+}
+
+@media screen and (min-width: 600px) {
+    .deskop {display: block;}
 }
